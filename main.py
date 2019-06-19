@@ -1,16 +1,17 @@
 import os
 import csv
+from pprint import pprint
 
 answer = {
     # Morning Section
     "grateful": [], # 3 Things I'm grateful for
-    "great_today": "", # What would make today great?
+    "great_today": null, # What would make today great?
     "affirmations": [], #D Daily affirmations: I am...
     "ideas": [],
     # Night Section
     "amazing_today": [], # 3 amazing things that happened today
-    "learned": [], # 3 things I learned today
-    "rating": 0, # -2 to 2
+    "learned": null, # 3 things I learned today
+    "rating": null, # -2 to 2
     "tasks": [] # 6 Important tasks for the next day
 }
 
@@ -40,3 +41,9 @@ def main():
         print("Last. List the 6 most important tasks you have to do tomorrow.")
         for _ in range(6):
             answer["tasks"].append(input("> "))
+        
+    pprint(answer)
+
+
+if __name__ == "__main__":
+    main()
